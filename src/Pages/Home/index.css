@@ -1,0 +1,108 @@
+.Container-Home {
+  width: 100vw;
+  height: 100vh;
+
+  gap: 15px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+h1.glow {
+    font-family: "Jersey 25", sans-serif;
+    font-size: clamp(24px, 4vw, 70px);
+    font-weight: 400;
+    font-style: normal;
+    color: #fff4f4;
+}
+
+p.glow{
+    font-family: "Jersey 25", sans-serif;
+    font-size: clamp(16px, 2vw, 24px);
+    text-align: center;
+    color: #fff4f4;
+}
+
+.glow {
+  text-shadow: 0 0 2px rgba(255, 215, 0, 0.5); /* Cor e desfoque da sombra */
+  animation: pulse 1s infinite alternate; /* Animação de pulsação */
+}
+
+@keyframes pulse {
+  from {
+    text-shadow: 0 0 2px rgba(255, 215, 0, 0.5); /* Sombras iniciais */
+  }
+  to {
+    text-shadow: 0 0 3px rgba(255, 217, 0, 0.63), /* Sombras maiores */
+                 0 0 4px rgba(255, 215, 0, 0.5), /* Aumente o desfoque */
+                 0 0 5px rgba(255, 215, 0, 0.3); /* para um efeito de pulsação */
+  }
+}
+
+
+.wrapper {
+    background-color: transparent;
+    border: none;
+    margin: 20px;
+    box-shadow: 0px 5px 10px 2px rgba(5, 5, 5, 0.6);
+}
+
+.wrapper:active {
+    transition: 200ms;
+    box-shadow: none;
+}
+
+a {
+  display: block;
+  position: relative;
+
+  width: 200px;
+  height: 40px;
+
+  border-radius: 5px;
+
+  font-family: "Jersey 25", sans-serif;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff4f4;
+  letter-spacing: 2px;
+  text-align: center;
+
+  text-decoration: none;
+  border: 2px solid #fff4f4;
+
+  transition: all .35s;
+}
+
+a span{
+  position: relative;
+  z-index: 2;
+}
+
+a:after{
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: #6d00c5;
+  transition: all .35s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:after{
+  width: 100%;
+}
+
+@media screen and (max-width: 500px) {
+  a {
+    width: 150px;
+    height: 40px;
+  }
+}

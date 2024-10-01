@@ -1,0 +1,67 @@
+.Container-Mission {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 40px;
+    gap: 20px;
+
+    background-color: black;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+
+.Container-Mission > div:first-child {
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.Choose {
+    padding: 10px 20px;
+}
+
+.Choose > h3{
+    font-family: "Play", sans-serif;
+    font-size: 22px;
+
+    color: white;
+    
+    transition: font-size 0.2s ease-in-out;
+}
+
+.Choose > h3:hover{
+    font-size: 20px;
+}
+
+.Container-cards {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+    width: 80vw;
+    text-align: center;
+}
+
+swiper-container::part(pagination) {
+    bottom: -8px;
+    
+}
+
+@media screen and (max-width: 600px) {
+    .Container-Mission {
+      padding: 10px;
+    }
+    .Container-cards {
+        width: 100%;
+        padding: 0px;
+    }
+}
+
